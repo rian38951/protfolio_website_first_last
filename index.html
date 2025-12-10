@@ -1,47 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Portfolio</title>
+  </head>
 
-</head>
-
-<body>
-
-<div id="app" class="container">
-
-  <h1>Welcome to My Website</h1>
-  <p> I have lived in Beaver City, Nebraska for 15 years of my life. I attended Southern Valley Public Schools and graduated in 2024.</p>
-  <img id="standup-picture" src="src/assets/standup.jpeg" alt="Picture">
-  
-  
-  
-  
-  <h1>My GitHub Repositories</h1>
-
-  <!-- Loading State -->
-  <div v-if="loading">Loading repositories...</div>
-
-  <!-- Error State -->
-  <div v-if="error" style="color:red; text-align:center;">{{ error }}</div>
-
-  <!-- Repo List -->
-  <div class="repo-list" v-if="!loading && !error">
-    <div class="repo-card" v-for="repo in repos" :key="repo.id">
-      <a :href="repo.html_url" target="_blank">{{ repo.name }}</a>
-
-      <p class="description">{{ repo.description || "No description provided" }}</p>
-
-      <div class="details">
-        <span><strong>Language:</strong> {{ repo.language || "N/A" }}</span>
-        <span><strong>Updated:</strong> {{ formatDate(repo.updated_at) }}</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script type="module" src="/src/main.js"></script>
-</body>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
