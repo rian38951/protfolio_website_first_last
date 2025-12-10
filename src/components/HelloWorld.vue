@@ -1,3 +1,14 @@
+<template>
+  <div class="greetings">
+    <h1>{{ msg }}</h1>
+    <p class="subtitle">
+      You’ve successfully created a project with
+      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+    </p>
+  </div>
+</template>
+
 <script setup>
 defineProps({
   msg: {
@@ -7,37 +18,25 @@ defineProps({
 })
 </script>
 
-<template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
-  </div>
-</template>
-
 <style scoped>
+.greetings {
+  padding: 20px;
+}
+
 h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #42b883;
 }
 
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 @media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
+  .greetings {
     text-align: left;
   }
 }
